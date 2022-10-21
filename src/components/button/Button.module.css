@@ -1,0 +1,15 @@
+.default {
+  border: none;
+  padding-block: 10px;
+  padding-inline: 15px;
+  background-color: #747bff;
+  color: #fff;
+  border-radius: 8px;
+  margin-inline: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.default:hover {
+  color: #fff;
+  background-color: #0713ff;
+}
