@@ -2,10 +2,11 @@ import { ComponentProps, ElementType, ReactNode } from 'react';
 
 import css from './Button.module.css';
 
+type color = 'primary' | 'secondary';
+
 type ButtonOwnProps<E extends ElementType = ElementType> = {
   children: string | ReactNode;
-  primary?: boolean;
-  secondary?: boolean;
+  color?: color;
   as?: E;
 };
 
@@ -14,11 +15,13 @@ type ButtonProps<E extends ElementType> = ButtonOwnProps<E> & Omit<ComponentProp
 const defaultElement = 'button';
 
 export const Button = <E extends ElementType = typeof defaultElement>(props: ButtonProps<E>) => {
-  const { children, as, ...otherElementProps } = props;
+  const { children, as, color = 'primary', ...otherElementProps } = props;
   const TagName = as ?? defaultElement;
 
+  const className = `${css.default} ${css[color]}`;
+
   return (
-    <TagName className={css.default} {...otherElementProps}>
+    <TagName className={className} {...otherElementProps}>
       {children}
     </TagName>
   );

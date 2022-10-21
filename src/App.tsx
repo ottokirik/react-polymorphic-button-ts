@@ -7,7 +7,9 @@ function App() {
       <Button as="a" href="https://google.com" target="_blank">
         Ссылка как кнопка
       </Button>
-      <Button type="button">Кнопка</Button>
+      <Button type="button" color="secondary">
+        Кнопка
+      </Button>
     </>
   );
 }

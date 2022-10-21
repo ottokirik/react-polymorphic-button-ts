@@ -2,14 +2,26 @@
   border: none;
   padding-block: 10px;
   padding-inline: 15px;
-  background-color: #747bff;
   color: #fff;
   border-radius: 8px;
   margin-inline: 8px;
   transition: all 0.3s ease-in-out;
 }
 
-.default:hover {
+.primary {
+  background-color: #747bff;
+}
+
+.primary:hover {
   color: #fff;
   background-color: #0713ff;
+}
+
+.secondary {
+  background-color: rgb(42, 178, 24);
+}
+
+.secondary:hover {
+  background-color: rgb(22, 156, 5);
+  color: #fff;
 }
